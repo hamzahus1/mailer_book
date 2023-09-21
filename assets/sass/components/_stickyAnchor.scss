@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Top Info component.
+// -----------------------------------------------------------------------------
+.information {
+  z-index: 4;
+  height: 2rem;
+  cursor: pointer;
+  background-color: $main-color;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all .35s;
+  display: flex;
+  .caption {
+    color: #0a0b0a;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  svg {
+    opacity: 1;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.25rem;
+    transform: translate3d(0rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: all 0.36s cubic-bezier(0.5, 1, 0.89, 1) 
+  }
+  &:hover {
+    svg {
+      opacity: 0;
+      transform: translate3d(1rem, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    }
+  }
+}

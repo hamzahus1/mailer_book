@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+footer {
+  background-color: $white;
+  .padding-global {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    .padding-vertical.padding-huge-footer {
+      padding: 4rem 0 2em;
+      .footer3_top-wrapper {
+        grid-column-gap: 4vw;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr .5fr;
+        align-items: start;
+        .footer3_logo-link {
+          float: none;
+          padding-left: 0;
+          .logo {
+            width: 15%;
+          }
+        }
+      }
+      .footer3_bottom-wrapper.margin-bottom {
+        margin-top: 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        .footer3_credit-text {
+          color: $dark-1;
+          font-size: .875rem;
+          grid-column: span 1 ;
+        }
+        .footer3_social-list {
+          grid-column-gap: 0.75rem;
+          grid-row-gap: 0rem;
+          white-space: normal;
+          grid-template-rows: auto;
+          grid-template-columns: max-content;
+          grid-auto-columns: max-content;
+          grid-auto-flow: column;
+          align-items: start;
+          justify-items: start;
+          display: grid;
+          grid-column: span 1 ;
+          justify-self: end;
+          .footer3_social-link {
+            align-items: center;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            .social-icon {
+              width: 4rem;
+              height: 4rem;
+              color: #5b636e;
+              background-color: $background-color;
+              border-radius: 400px;
+              justify-content: center;
+              align-items: center;
+              transition: all .2s;
+              display: flex;
+              &:hover {
+                color: $dark-1;
+                background-color: #dedede;
+            }
+          }
+        }
+      }
+      }
+    }
+  }
+
+}

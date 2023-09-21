@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header.mailerbook__nav {
+  background-color: $background-color;
+  padding: 1.5rem 2.5rem;
+  nav {
+    width: 100%;
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+    .nav_logo-link {
+      float: left;
+      color: #333;
+      text-decoration: none;
+      position: relative;
+      .nav_logo {
+        width: 60%;
+      }
+    }
+    .nav_menu {
+      grid-column-gap: 4px;
+      grid-row-gap: 4px;
+      justify-content: flex-end;
+      align-items: center;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      a {
+        text-decoration: none;
+        opacity: 1;
+        color: $dark-1;
+        border-radius: 8px;
+        padding: 0.5rem 0.76rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: all 0.2s;
+        &:hover {
+          background-color: #e8e8ea;
+        }
+      }
+      a.active {
+        background-color: #e8e8ea;
+      }
+      .nav_button-wrapper {
+        margin-left: 1rem;
+        display: flex;
+      }
+    }
+
+    #responsove_menu {
+      display: none;
+      #menu_icon {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        svg {
+          height: 16px;
+          width: 16px;
+        }
+      }
+      ul {
+        position: absolute;
+        z-index: 99;
+        top: 60px;
+        left: 0;
+        background-color: $white;
+        border-radius: 6px;
+        padding: 1em;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        height: 0;
+        pointer-events: none;
+        transition: all .1s ease-in-out;
+        box-shadow: 0 1px 0.5px rgba(11, 20, 26, 0.13);
+        a {
+          text-decoration: none;
+          border-bottom: 2px solid rgba(237, 237, 237, 0.644);
+          padding-bottom: .7em;
+          margin-bottom: .7em;
+          text-decoration: none;
+          color: $dark-1;
+          font-size: 1rem;
+          font-weight: 600;
+          transition: all 0.2s;
+          &:hover {
+            color: $main-color;
+          }
+        }
+        .nav_button-wrapper {
+          a {
+            display: block;
+            padding-top: .4em;
+            margin-top: .4em;
+            width: 235px;
+          }
+        }
+      }
+    }
+  }
+}
